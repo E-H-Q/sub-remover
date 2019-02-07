@@ -18,7 +18,8 @@ change() {
 main() {
 	echo "-- MAIN --"
 	echo "Target files: "
-	echo "	" `ls | egrep '\.avi$|\.mp4$|\.mkv$'`
+	ls -1 | egrep '\.avi$|\.mp4$|\.mkv$'
+	echo
 	read -p "Modify these files? (Y/N): " -n 1 -r
 	if [[ $REPLY =~ ^[Yy]$ ]]
 	then
